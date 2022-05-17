@@ -1,10 +1,10 @@
-const { append } = require("express/lib/response")
+// const { append } = require("express/lib/response")
 
 require('dotenv').config()
-const express = ('express')
-const app= express()
+const express = require('express')
+const app = express()
 
-app.use('/places', require('./controller/places'))
+app.use('/places', require('./controllers/places'))
 
 
 app.get ('/', (req, res) => {
