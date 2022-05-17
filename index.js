@@ -1,11 +1,16 @@
 const { append } = require("express/lib/response")
 
+require('dotenv').config()
 const express = ('express')
-const pp= express()
+const app= express()
 
 
-append.get ('/', (req, res) => {
+app.get ('/', (req, res) => {
     res.send('Hello world!')
 })
 
-app.listen(3000)
+app.get('*', (req, res) => {
+    res.status(404).send('<h1>404 page</h1>')
+})
+
+app.listen(process.env.PORT)
