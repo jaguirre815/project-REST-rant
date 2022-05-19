@@ -1,14 +1,25 @@
 const React = require('react')
 const Def = require('./default')
+
+
 function home () {
     return (
-        <def>
+        <Def>
             <main>
-                <h1>HOME</h1>
-                <a href="/places"><button className="btn-primary">Places Page</button></a>
-
+                <h1>Rest-Rant</h1>
+                <div>
+                    <img src="/images/chia-fruit-drink.jpg" alt="Chia Fruit Shake" />
+                    <div>
+                        Photo by <a href="AUTHOR_LINK">Brenda Godinez</a> on <a href="UNSPLASH_LINK">Unsplash</a>
+                    </div>
+                </div>
+                    <a href="/places">
+                        <button className="btn-primary">Places Page</button>
+                     </a>
             </main>
-        </def>
+
+        </Def>
     )
 }
+
 module.exports = home
