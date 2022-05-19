@@ -4,7 +4,7 @@ let places = [{
     name: 'Mexican Food',
     city: 'Seattle',
     state: 'WA',
-    cuisines: 'Thai, Pan-Asian',
+    cuisines: 'Mexican Cuisine',
     pic: '/images/mexican-restaurant.jpeg'
   }, {
     name: 'Coding Cat Cafe',
@@ -13,6 +13,11 @@ let places = [{
     cuisines: 'Coffee, Bakery',
     pic: '/images/cafecafe.jpeg'
   }]
+
+  router.get('/new', (req, res) => {
+    res.render('places/new')
+  })
+  
 
   router.get('/', (req, res) => {
       
